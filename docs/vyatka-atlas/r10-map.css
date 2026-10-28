@@ -1,0 +1,36 @@
+
+/* Vyatka Historical Atlas R10 — all map objects, hover popups and color key */
+.r10-legend{margin:0;padding:17px 21px 20px;background:#fff;border-top:2px solid #d4e0e9}
+.r10-legend h2{font-size:16px;margin:0 0 8px;color:#1f3249}
+.r10-legend .r10-legend-grid{display:flex;flex-wrap:wrap;gap:9px 17px}
+.r10-legend .r10-legend-entry{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#344659}
+.r10-legend .r10-color{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px #acb8c5}
+.r10-legend .r10-legend-notes{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:13px;font-size:11px;line-height:1.5;color:#617285}
+.r10-legend .r10-example-dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:#13838b;vertical-align:middle;margin-right:5px;border:2px solid white;box-shadow:0 0 0 1px #13838b}
+.r10-legend .r10-example-dot.approx{border:2px dashed #fff;outline:2px dashed #c67c1f;box-shadow:none}
+.r10-map-pin{display:flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:var(--r10-pin,#167e86);border:3px solid #fff;box-shadow:0 1px 6px #19344e70;cursor:pointer}
+.r10-map-pin.approx{border:3px dashed #fff;outline:2px dashed #c78327}
+.r10-marker-shell,.r10-cluster-shell{background:transparent!important;border:0!important}
+.r10-group-pin{height:37px;width:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#163c5e;color:#fff;font:700 13px system-ui;border:3px solid white;box-shadow:0 0 0 2px #7793aa,0 2px 7px #21364b70}
+.r10-group-pin.big{height:43px;width:43px;background:#215173}
+.r10-hover-popup .leaflet-popup-content{margin:12px!important;min-width:235px!important}
+.r10-hover-popup .leaflet-popup-content-wrapper{border-radius:10px;box-shadow:0 8px 24px #102b4350}
+.r10-popup-card{font:12px/1.52 system-ui,-apple-system,"Segoe UI",sans-serif;max-height:380px;overflow:auto;color:#263647;overscroll-behavior:contain}
+.r10-popup-card h3{font-size:15px;line-height:1.3;margin:2px 24px 8px 0;color:#1c354f}
+.r10-popup-card h4{font-size:12px;margin:12px 0 5px}
+.r10-popup-card p{margin:5px 0;line-height:1.5}
+.r10-popup-card .r10-fact{border-top:1px solid #edf1f5;padding:5px 0}
+.r10-popup-card .r10-fact b{color:#52647a;font-weight:600}
+.r10-popup-card a{color:#125baf;text-decoration:underline;overflow-wrap:anywhere}
+.r10-popup-card .r10-warning{border-left:3px solid #d0932b;background:#fff6e4;color:#734c14;padding:8px;margin:7px 0}
+.r10-popup-card .r10-ok{border-left:3px solid #4285a2;background:#ecf8fc;color:#245467;padding:8px;margin:7px 0}
+.r10-popup-card .r10-ev{padding:8px 0;border-top:1px solid #e7ecf2}
+.r10-popup-card .r10-muted{font-size:11px;color:#63778b}
+.r10-popup-card .r10-button{border:1px solid #195d9e;background:#1b63a2;color:#fff;border-radius:6px;padding:7px 9px;cursor:pointer;font:600 11px system-ui;margin-top:7px}
+.r10-cluster-list{max-height:270px;overflow:auto;display:grid;gap:3px}
+.r10-cluster-list button{padding:6px 7px;border:1px solid #e5ebf2;background:#f5f9fd;border-radius:5px;text-align:left;cursor:pointer;font:12px system-ui;color:#23425e}
+.r10-cluster-list button:hover{background:#e6f1fd}
+.r10-cluster-preview{border-top:1px solid #e4eaf0;margin-top:10px;padding-top:6px;max-height:210px;overflow:auto}
+.r10-cluster-preview .r10-popup-card{max-height:200px}
+.r10-mapped-note{font-size:11px;color:#f6f9fa;background:#274c6d;padding:6px 20px}
+@media(max-width:600px){.r10-legend{padding:13px}.r10-popup-card{max-height:270px}.r10-hover-popup .leaflet-popup-content{min-width:200px!important}.r10-legend .r10-legend-entry{font-size:12px}}
