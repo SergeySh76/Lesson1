@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Вятский исторический атлас — 109 объектов</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+:root{font:15px system-ui,Arial,sans-serif;color:#203043;background:#edf2f6}*{box-sizing:border-box}body{margin:0}header{background:#102943;color:#f4f7fa;padding:16px 22px}header h1{font-size:22px;margin:0 0 4px}header p{font-size:12px;opacity:.8;margin:0}.stats{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px;background:white;border-bottom:1px solid #d6e0ea}.stats span{font-size:12px;background:#edf2f7;border-radius:7px;padding:7px 10px}main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(315px,1fr);min-height:650px}.map-wrap{position:relative;background:#dae6ef}#map{height:660px}.map-label{position:absolute;bottom:21px;left:12px;z-index:400;padding:8px;background:rgba(255,255,255,.92);font-size:11px;border-radius:7px;max-width:245px;box-shadow:0 1px 8px #0002}aside{background:#fff;border-left:1px solid #d8e0e9;min-width:0}.controls{padding:13px;border-bottom:1px solid #e6eaf0;display:grid;gap:8px}.controls input,.controls select,.controls button{width:100%;padding:9px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:#26364a;font:13px system-ui}.controls .pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}button{cursor:pointer}.items{max-height:285px;overflow-y:auto}.entry{width:100%;border:0;border-bottom:1px solid #eef1f4;padding:9px 13px;text-align:left;background:white;color:#243449;font:13px system-ui}.entry:hover,.entry.active{background:#e9f3ff}.entry small{display:block;font-size:11px;color:#67798b;margin-top:3px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}.card{padding:14px;border-top:1px solid #dce5ef;min-height:220px;overflow-y:auto;max-height:360px;font-size:13px;line-height:1.55}.card h3{font-size:16px;margin:0 0 7px}.card p{margin:7px 0}.card .soft{color:#60748a;font-size:12px}.card a{color:#1457aa;text-decoration:underline;word-break:break-all}.tabs{display:flex;gap:8px;padding:8px 12px;border-bottom:1px solid #e5eaf0}.tabs button{font:12px system-ui;border:1px solid #cdd8e5;border-radius:7px;padding:7px 12px;background:#f3f6fa}.tabs button.sel{background:#244e7b;color:white}.export{display:flex;gap:6px;flex-wrap:wrap}.export button{flex:1;padding:7px;border:1px solid #cbd5e1;border-radius:7px;background:#f0f5fa;font:12px system-ui}.foot{font-size:12px;line-height:1.6;padding:14px 18px;background:#fff;border-top:1px solid #dbe2ea}.foot a{color:#16549e}#status{font-size:12px;color:#566c81;padding:4px 13px}.badge{font-size:11px;border-radius:6px;background:#f0f3f7;padding:3px 7px;display:inline-block;margin:3px 3px 3px 0}
+@media(max-width:800px){main{grid-template-columns:1fr}#map{height:440px}aside{border-left:0}.items{max-height:255px}}
+</style></head>
+<body><header><h1>Вятский исторический атлас</h1><p>Находки, древности, палеонтология, метеориты и историческая география · проект R08 · 28 октября 2026</p></header>
+<div class="stats" id="stats"><span>Загрузка данных…</span></div>
+<main><div class="map-wrap"><div id="map"></div><div class="map-label">Маркеры обозначают только проверяемые географические ориентиры. Места наблюдения болидов ≠ места падений. Остальные записи доступны в списке.</div></div>
+<aside><div class="controls"><input id="search" placeholder="Поиск по названию, описанию, источнику…" aria-label="Поиск"><div class="pair"><select id="category"><option value="">Все категории</option></select><select id="region"><option value="">Все территории</option><option value="main">Современная Кировская область</option><option value="other">Вне современной области</option><option value="unknown">Регион требует уточнения</option></select></div><div class="pair"><select id="geofilter"><option value="">Все объекты</option><option value="mapped">Есть координаты</option><option value="unmapped">Без координат</option></select><select id="sourcefilter"><option value="">Все источники</option><option value="evidence">Есть подробный фрагмент</option></select></div><div class="export"><button id="csv">CSV</button><button id="geojson">GeoJSON</button><button id="json">JSON</button><button id="xml">XML</button></div></div>
+<div id="status">Загрузка…</div><div class="tabs"><button data-tab="objects" class="sel">Объекты</button><button data-tab="toponyms">Топонимы</button><button data-tab="documents">Документы</button></div><div id="list" class="items"></div><section id="detail" class="card"><p>Выберите запись из списка или точку на карте.</p></section></aside></main>
+<footer class="foot">Исторический материал: 55 загруженных PDF, изученных выборочно. Координаты только у 15 записей; 94 географические привязки требуют проверки. Основная территория — современная Кировская область; сравнительный слой бывшей Вятской губернии показан отдельно. Источники связаны с PDF-страницами и абзацами, когда такие сведения подтверждены. <a target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1SXxUvfzplVr50yCr8T2E6Rgk86-uNebi_DgBC3JpsRE/edit">Подробная исследовательская база</a>.</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+"use strict";
+const BASE="https://docs.google.com/spreadsheets/d/1SXxUvfzplVr50yCr8T2E6Rgk86-uNebi_DgBC3JpsRE/edit";
+let DATA=null,tab="objects",selected=null,layer=null,map=null,filtered=[];
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const clr={"Археология":"#16868d","Метеорит":"#dc7b26","Болид":"#9156bd","Геология":"#45995b","Палеонтология":"#49935b","Ударная структура":"#4e69b6","Клады":"#b68a28","Предания":"#8996a8","Гипотеза":"#8996a8","Историческая география":"#8996a8"};
+const color=r=>clr[r.category]||"#71839a";
+const mapped=r=>Number.isFinite(r.latitude)&&Number.isFinite(r.longitude);
+const main=r=>r.scope==="KIROV"||r.scope==="KIROV_PENDING";
+const other=r=>r.scope.startsWith("OTHER");
+const groupLabel=r=>main(r)?"Современная Кировская область":other(r)?"Историческая Вятская губерния / соседний регион":"Современный регион не установлен";
+const coordRole=r=>({CATALOG_SITE:"Каталожные координаты метеорита",IMPACT_CENTER:"Центр ударной структуры",OBSERVER_LOCALITY_ONLY:"Ориентир населённого пункта-наблюдателя",SITE_POSITION_PRELIMINARY:"Предварительная привязка памятника",UNLOCATED:"Место не локализовано"}[r.coordinate_role]||r.coordinate_role);
+function markerClusters(rows){const groups=new Map();for(const r of rows.filter(mapped)){const id=r.latitude.toFixed(6)+","+r.longitude.toFixed(6);if(!groups.has(id))groups.set(id,[]);groups.get(id).push(r);}return [...groups.values()]}
+function setupMap(){
+if(typeof L==="undefined"){$("map").textContent="Для отображения карты требуется доступ к Leaflet через интернет.";return;}
+map=L.map("map",{scrollWheelZoom:true}).setView([57.4,50.0],7);
+const osm=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap contributors",maxZoom:18}).addTo(map);
+const sat=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{maxZoom:18,attribution:"Tiles © Esri"});
+L.control.layers({"OpenStreetMap":osm,"Спутниковые снимки":sat}).addTo(map);layer=L.layerGroup().addTo(map);
+}
+function updateMap(){
+if(!map)return;layer.clearLayers();
+for(const arr of markerClusters(filtered)){
+const r=arr[0],mark=L.circleMarker([r.latitude,r.longitude],{radius:arr.length>1?9:7,color:"#fff",weight:2,fillColor:color(r),fillOpacity:1}).addTo(layer);
+mark.bindTooltip(arr.length>1?arr.length+" события: "+arr.map(x=>x.name).join("; "):r.name,{direction:"top"});
+mark.on("click",()=>choose(r.id,true));
+}
+}
+function getEvidence(r){return DATA.evidence.filter(e=>e.object_ids.includes(r.id));}
+function choose(id,fly){
+let r=DATA.records.find(x=>x.id===id);if(!r)return;selected=id;
+const es=getEvidence(r);
+let evidenceHtml=es.length?'<h4>Исторические свидетельства ('+es.length+')</h4>'+es.map(e=>{
+let d=DATA.documents.find(x=>x.id===e.doc_id);
+let link=d?.neb_url?'<a href="'+esc(d.neb_url)+'" target="_blank" rel="noopener">Карточка НЭБ</a>':"";
+return '<div style="border-top:1px solid #e5ebf3;padding:7px 0"><div class="soft">'+esc(e.doc_id||"Не установлен")+' · PDF с. '+esc(e.page||"не установлена")+(e.paragraph?' · '+esc(e.paragraph):"")+'</div><div>'+esc(e.summary||"")+'</div>'+link+'</div>';
+}).join(""):'<p class="soft">Точный абзац пока не оформлен отдельной записью. Смотрите указанный источник.</p>';
+let d=r.doc_id?DATA.documents.find(x=>x.id===r.doc_id):null;
+let ext=r.external_url?'<a href="'+esc(r.external_url)+'" target="_blank" rel="noopener">Внешний источник</a>':"";
+$("detail").innerHTML='<h3>'+esc(r.name)+'</h3><span class="badge">'+esc(r.id)+'</span><span class="badge">'+esc(r.category)+'</span><span class="badge">'+esc(groupLabel(r))+'</span>'+
+'<p>'+esc(r.summary||"Описание не заполнено")+'</p>'+
+'<p class="soft"><b>Исторический ориентир:</b> '+esc(r.historical_location||"Уточняется")+'</p>'+
+'<p class="soft"><b>Датировка:</b> '+esc(r.date||"Уточняется")+'</p>'+
+'<p class="soft"><b>Геопривязка:</b> '+esc(coordRole(r))+'</p>'+
+(mapped(r)?'<p class="soft"><b>WGS84:</b> '+r.latitude.toFixed(6)+', '+r.longitude.toFixed(6)+' · <a href="https://www.openstreetmap.org/?mlat='+r.latitude+'&mlon='+r.longitude+'#map=11/'+r.latitude+'/'+r.longitude+'" target="_blank" rel="noopener">На OSM</a> · <a href="https://yandex.ru/maps/?ll='+r.longitude+'%2C'+r.latitude+'&z=11" target="_blank" rel="noopener">Яндекс</a></p>':'<p class="soft"><b>Координаты:</b> пока не установлены. Произвольная точка не создаётся.</p>')+
+'<p class="soft"><b>Первичный источник:</b> '+esc(r.source||"Не установлен")+' '+esc(r.page_label||"")+'</p>'+
+(d?.neb_url?'<p><a href="'+esc(d.neb_url)+'" target="_blank" rel="noopener">Постоянная карточка источника в НЭБ</a></p>':"")+
+(ext?'<p>'+ext+'</p>':"")+
+evidenceHtml+
+(r.notes?'<p class="soft"><b>Примечание:</b> '+esc(r.notes)+'</p>':"");
+document.querySelectorAll(".entry").forEach(b=>b.classList.toggle("active",b.dataset.id===id));
+if(fly&&map&&mapped(r))map.flyTo([r.latitude,r.longitude],11,{duration:.6});
+}
+function listForTab(){
+if(tab==="toponyms")return DATA.toponyms.map(t=>({id:t.id,name:t.historical_name,subtitle:t.modern_name,search:[t.historical_name,t.modern_name,t.basis,t.status].join(" ")}));
+if(tab==="documents")return DATA.documents.map(d=>({id:d.id,name:d.title,subtitle:d.year+" · "+(d.neb_url?"НЭБ":"Без подтверждённой ссылки НЭБ"),search:[d.title,d.filename,d.year,d.id].join(" ")}));
+return DATA.records.map(r=>({id:r.id,name:r.name,subtitle:r.category+" · "+(mapped(r)?"есть координаты":"место не определено"),search:[r.name,r.category,r.scope,r.summary,r.source,r.id].join(" "),record:r}));
+}
+function filterData(){
+if(!DATA)return;const q=$("search").value.toLowerCase().trim(),category=$("category").value,region=$("region").value,geofilter=$("geofilter").value,srcfilter=$("sourcefilter").value;
+const shown=listForTab().filter(x=>{
+if(q&&!x.search.toLowerCase().includes(q))return false;
+const r=x.record;
+if(!r)return true;
+if(category&&r.category!==category)return false;
+if(region==="main"&&!main(r))return false;
+if(region==="other"&&!other(r))return false;
+if(region==="unknown"&&(main(r)||other(r)))return false;
+if(geofilter==="mapped"&&!mapped(r))return false;
+if(geofilter==="unmapped"&&mapped(r))return false;
+if(srcfilter==="evidence"&&!DATA.evidence.some(e=>e.object_ids.includes(r.id)))return false;
+return true;});
+filtered=tab==="objects"?shown.map(x=>x.record):[];
+$("status").textContent=(tab==="objects"?"Объектов: ":tab==="toponyms"?"Топонимов: ":"Документов: ")+shown.length;
+$("list").innerHTML=shown.map(x=>'<button type="button" class="entry '+(x.id===selected?"active":"")+'" data-id="'+esc(x.id)+'">'+(x.record?'<span class="dot" style="background:'+color(x.record)+'"></span>':"")+'<b>'+esc(x.name)+'</b><small>'+esc(x.subtitle)+'</small></button>').join("");
+document.querySelectorAll(".entry").forEach(b=>b.addEventListener("click",()=>onSelect(b.dataset.id)));
+updateMap();
+}
+function onSelect(id){if(tab==="objects")return choose(id,true);if(tab==="toponyms"){
+const t=DATA.toponyms.find(x=>x.id===id);if(!t)return;
+$("detail").innerHTML='<h3>'+esc(t.historical_name)+'</h3><p><b>Современный ориентир:</b> '+esc(t.modern_name)+'</p><p>'+esc(t.basis)+'</p><p class="soft">'+esc(t.status)+'</p><p class="soft">Документ: '+esc(t.doc_id)+'; PDF с. '+esc(t.page)+'</p><p class="soft">'+esc(t.caution)+'</p>';
+}else{
+const d=DATA.documents.find(x=>x.id===id);if(!d)return;
+$("detail").innerHTML='<h3>'+esc(d.title)+'</h3><p><b>ID:</b> '+esc(d.id)+' · '+esc(d.year)+'</p><p class="soft">'+esc(d.filename)+'</p><p>Подтверждённая ссылка на НЭБ: '+(d.neb_url?'<a href="'+esc(d.neb_url)+'" target="_blank" rel="noopener">Открыть карточку</a>':'пока не установлена')+'</p><p><a target="_blank" rel="noopener" href="'+esc(d.neb_search_url)+'">Найти по названию в НЭБ</a></p><p class="soft">'+esc(d.status)+'</p>';
+}}
+function makeCsv(keys,rows){return '\ufeff'+[keys,...rows.map(o=>keys.map(k=>o[k]??""))].map(a=>a.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(";")).join("\r\n");}
+function save(name,contents,mime){const blob=new Blob([contents],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
+function geojson(){return {type:"FeatureCollection",name:"Vyatka Atlas R08",features:DATA.records.map(r=>({type:"Feature",id:r.id,geometry:mapped(r)?{type:"Point",coordinates:[r.longitude,r.latitude]}:null,properties:{name:r.name,category:r.category,scope:r.scope,coordinate_role:r.coordinate_role,summary:r.summary,doc_id:r.doc_id}}))};}
+function xml(){const e=s=>String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");return '<?xml version="1.0" encoding="UTF-8"?>\n<atlas version="R08">\n'+DATA.records.map(r=>'  <object id="'+e(r.id)+'"><name>'+e(r.name)+'</name><category>'+e(r.category)+'</category><summary>'+e(r.summary)+'</summary></object>').join("\n")+'\n</atlas>\n';}
+function setup(){
+$("stats").innerHTML=['records:Объектов','documents:PDF в реестре','evidence:Свидетельств','toponyms:Топонимов','geolocated:С координатами'].map(t=>{const [k,l]=t.split(":");return '<span><b>'+DATA.stats[k]+'</b> '+l+'</span>'}).join("");
+for(const cat of [...new Set(DATA.records.map(r=>r.category))].sort((a,b)=>a.localeCompare(b,"ru"))){let op=document.createElement("option");op.value=cat;op.textContent=cat;$("category").append(op);}
+setupMap();filterData();choose("A001",false);
+for(const id of ["search","category","region","geofilter","sourcefilter"])$(id).addEventListener(id==="search"?"input":"change",filterData);
+document.querySelectorAll("[data-tab]").forEach(btn=>btn.addEventListener("click",()=>{tab=btn.dataset.tab;document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("sel",b===btn));filterData();}));
+$("csv").addEventListener("click",()=>save("vyatka_atlas_R08.csv",makeCsv(["id","name","category","scope","latitude","longitude","coordinate_role","summary","doc_id"],DATA.records),"text/csv;charset=utf-8"));
+$("json").addEventListener("click",()=>save("vyatka_atlas_R08.json",JSON.stringify(DATA,null,2),"application/json"));
+$("xml").addEventListener("click",()=>save("vyatka_atlas_R08.xml",xml(),"application/xml"));
+$("geojson").addEventListener("click",()=>save("vyatka_atlas_R08.geojson",JSON.stringify(geojson(),null,2),"application/geo+json"));
+}
+fetch("data.json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(d=>{DATA=d;setup();}).catch(err=>{$("stats").innerHTML="<span>Ошибка загрузки данных</span>";$("status").textContent=err.message;});
+</script></body></html>
