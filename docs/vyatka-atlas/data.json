@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "Вятский исторический атлас",
-    "revision": "R08_WEB",
+    "revision": "R09_MAP_ACTIVE_ALL",
     "generated_at": "2026-10-28",
     "language": "ru",
     "crs": "EPSG:4326",
@@ -15,7 +15,8 @@
       "Каталожные координаты метеорита не тождественны месту его падения.",
       "Координаты наблюдателей болидов — лишь ориентир населённого пункта.",
       "Часть территории бывшей Вятской губернии лежит за пределами современной Кировской области."
-    ]
+    ],
+    "map_note": "У каждой из 109 записей есть географический ориентир для просмотра, но только 15 координат исходных объектов. Остальные 94 центра и круги — условные, не точки находок или доказанные границы."
   },
   "stats": {
     "records": 109,
@@ -26,7 +27,10 @@
     "sources": 17,
     "geolocated": 15,
     "missing_coords": 94,
-    "verified_doc_urls": 3
+    "verified_doc_urls": 3,
+    "map_navigable": 109,
+    "map_approximate": 94,
+    "map_source_coords": 15
   },
   "records": [
     {
@@ -46,7 +50,17 @@
       "page_label": "Спицын, каталог 1882, PDF с. 41–44",
       "source": "Спицын, каталог 1882, PDF с. 41–44",
       "external_url": "",
-      "notes": "Не Елабужское Чёртово городище"
+      "notes": "Не Елабужское Чёртово городище",
+      "map_target": {
+        "latitude": 58.671667,
+        "longitude": 50.144444,
+        "radius_km": 3,
+        "kind": "HISTORICAL_SITE",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Подчуршинское",
+        "anchor_source": "",
+        "explanation": "Предварительная координата памятника; радиус показан для обзора окрестностей"
+      }
     },
     {
       "id": "A002",
@@ -65,7 +79,17 @@
       "page_label": "Спицын 1890, PDF с. 229",
       "source": "Спицын 1890, PDF с. 229",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.746342,
+        "longitude": 52.032827,
+        "radius_km": 3,
+        "kind": "HISTORICAL_SITE",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Елабужское Чёртово городище",
+        "anchor_source": "",
+        "explanation": "Предварительная координата памятника; радиус показан для обзора окрестностей"
+      }
     },
     {
       "id": "A003",
@@ -84,7 +108,17 @@
       "page_label": "Спицын 1890, PDF с. 212",
       "source": "Спицын 1890, PDF с. 212",
       "external_url": "",
-      "notes": "Координаты требуют независимой проверки"
+      "notes": "Координаты требуют независимой проверки",
+      "map_target": {
+        "latitude": 55.718889,
+        "longitude": 52.130278,
+        "radius_km": 3,
+        "kind": "HISTORICAL_SITE",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Ананьинский",
+        "anchor_source": "",
+        "explanation": "Предварительная координата памятника; радиус показан для обзора окрестностей"
+      }
     },
     {
       "id": "A004",
@@ -103,7 +137,17 @@
       "page_label": "Село Истобенское…, 1893",
       "source": "Село Истобенское…, 1893",
       "external_url": "",
-      "notes": "Не ставить точку в центре села"
+      "notes": "Не ставить точку в центре села",
+      "map_target": {
+        "latitude": 58.41487,
+        "longitude": 48.78856,
+        "radius_km": 9,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Село Истобенск",
+        "anchor_source": "https://mapcarta.com/W47295562",
+        "explanation": "Описано Истобенское городище; центр села не является площадкой памятника"
+      }
     },
     {
       "id": "A005",
@@ -122,7 +166,17 @@
       "page_label": "Село Истобенское…, 1893",
       "source": "Село Истобенское…, 1893",
       "external_url": "",
-      "notes": "Отдельно от городища"
+      "notes": "Отдельно от городища",
+      "map_target": {
+        "latitude": 58.41487,
+        "longitude": 48.78856,
+        "radius_km": 12,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Село Истобенск",
+        "anchor_source": "https://mapcarta.com/W47295562",
+        "explanation": "Береговые находки у Истобенска, участок берега неизвестен"
+      }
     },
     {
       "id": "A006",
@@ -141,7 +195,17 @@
       "page_label": "Спицын 1882 с.35; 1890 с.207–209",
       "source": "Спицын 1882 с.35; 1890 с.207–209",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.78709,
+        "longitude": 48.43628,
+        "radius_km": 12,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Село Окатьево",
+        "anchor_source": "https://www.komandirovka.ru/cities/okatevo/",
+        "explanation": "Находки на полях около села Окатьево; конкретные поля не найдены"
+      }
     },
     {
       "id": "A007",
@@ -160,7 +224,17 @@
       "page_label": "Спицын 1890, PDF с.208",
       "source": "Спицын 1890, PDF с.208",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.338,
+        "longitude": 48.46,
+        "radius_km": 32,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нижнее течение Моломы, условный ориентир",
+        "anchor_source": "",
+        "explanation": "Нижние террасы Моломы; исторические места находок не восстановлены"
+      }
     },
     {
       "id": "A008",
@@ -179,7 +253,17 @@
       "page_label": "Спицын 1890, PDF с.209",
       "source": "Спицын 1890, PDF с.209",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.92444,
+        "longitude": 47.73889,
+        "radius_km": 48,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Устье Юмы при впадении в Пижму",
+        "anchor_source": "https://komanda-k.ru/россия/река-юма",
+        "explanation": "Устье Юмы — географический ориентир, находки отмечены вдоль реки"
+      }
     },
     {
       "id": "A009",
@@ -198,7 +282,17 @@
       "page_label": "Спицын 1890, PDF с.209",
       "source": "Спицын 1890, PDF с.209",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.5848,
+        "longitude": 48.9584,
+        "radius_km": 32,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Низовья Пижмы у Кукарки",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Находки по низовьям Пижмы, не у одной точки"
+      }
     },
     {
       "id": "A010",
@@ -217,7 +311,17 @@
       "page_label": "Спицын 1890, PDF с.230–235",
       "source": "Спицын 1890, PDF с.230–235",
       "external_url": "",
-      "notes": "Разделить на индивидуальные объекты"
+      "notes": "Разделить на индивидуальные объекты",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 150,
+        "kind": "CORRIDOR",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Правобережье Камы между реками Сива и Иж (обобщённый ориентир)",
+        "anchor_source": "https://www.prlib.ru/item/906689",
+        "explanation": "Группа городищ на длинном участке Камы между Сивой и Ижом"
+      }
     },
     {
       "id": "A011",
@@ -236,7 +340,17 @@
       "page_label": "Спицын 1890, PDF с.230",
       "source": "Спицын 1890, PDF с.230",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.635,
+        "longitude": 51.66,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котловка близ устья Вятки, примерный ориентир",
+        "anchor_source": "https://komanda-k.ru/татарстан/устье-реки-вятка-–-река-кама-мамадышский-район-рт",
+        "explanation": "Котловская Шишка недалеко от Котловки, точная вершина не идентифицирована"
+      }
     },
     {
       "id": "A012",
@@ -255,7 +369,17 @@
       "page_label": "Спицын 1890, PDF с.230",
       "source": "Спицын 1890, PDF с.230",
       "external_url": "",
-      "notes": "Не Котловская Шишка"
+      "notes": "Не Котловская Шишка",
+      "map_target": {
+        "latitude": 55.635,
+        "longitude": 51.66,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котловка близ устья Вятки, примерный ориентир",
+        "anchor_source": "https://komanda-k.ru/татарстан/устье-реки-вятка-–-река-кама-мамадышский-район-рт",
+        "explanation": "Второе городище между оврагами рядом с Котловкой"
+      }
     },
     {
       "id": "A013",
@@ -274,7 +398,17 @@
       "page_label": "Спицын 1890, PDF с.236–237",
       "source": "Спицын 1890, PDF с.236–237",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Могильники близ бывшего Пьяного Бора, точные участки неизвестны"
+      }
     },
     {
       "id": "A014",
@@ -293,7 +427,17 @@
       "page_label": "Спицын 1882, PDF с.38–39",
       "source": "Спицын 1882, PDF с.38–39",
       "external_url": "",
-      "notes": "Исторический топоним проверить"
+      "notes": "Исторический топоним проверить",
+      "map_target": {
+        "latitude": 57.9787,
+        "longitude": 53.0138,
+        "radius_km": 45,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Балезино, Удмуртия",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Курган рядом с историческим Балезино; совпадение с современной станцией не подтверждено"
+      }
     },
     {
       "id": "A015",
@@ -312,7 +456,17 @@
       "page_label": "Спицын 1882, PDF с.39",
       "source": "Спицын 1882, PDF с.39",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.1393,
+        "longitude": 52.658,
+        "radius_km": 130,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Глазов",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Уездной ориентир по Глазовскому уезду; положение Городищенской и реки Коса не отождествлено"
+      }
     },
     {
       "id": "A016",
@@ -331,7 +485,17 @@
       "page_label": "Спицын 1882, PDF с.36",
       "source": "Спицын 1882, PDF с.36",
       "external_url": "",
-      "notes": "Не метеориты"
+      "notes": "Не метеориты",
+      "map_target": {
+        "latitude": 58.3089,
+        "longitude": 48.348,
+        "radius_km": 100,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котельнич",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Котельнический уезд: Тороповское не локализовано"
+      }
     },
     {
       "id": "A017",
@@ -350,7 +514,17 @@
       "page_label": "Спицын 1882, PDF с.35",
       "source": "Спицын 1882, PDF с.35",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.3033,
+        "longitude": 47.8861,
+        "radius_km": 120,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Яранск",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Деревни Тупен и Вынур, Яранский уезд, не отождествлены"
+      }
     },
     {
       "id": "A018",
@@ -369,7 +543,17 @@
       "page_label": "Спицын 1882, PDF с.36",
       "source": "Спицын 1882, PDF с.36",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.65,
+        "longitude": 49.65,
+        "radius_km": 17,
+        "kind": "ROAD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Филейская сторона города Вятки (условный ориентир)",
+        "anchor_source": "",
+        "explanation": "Старая Филейская дорога, шесть верст от Вятки"
+      }
     },
     {
       "id": "A019",
@@ -388,7 +572,17 @@
       "page_label": "Спицын 1882, PDF с.39",
       "source": "Спицын 1882, PDF с.39",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.1393,
+        "longitude": 52.658,
+        "radius_km": 37,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Глазов",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Курган в пяти верстах от Глазова, у притока Чепцы"
+      }
     },
     {
       "id": "A020",
@@ -407,7 +601,17 @@
       "page_label": "Спицын 1885, PDF с.193",
       "source": "Спицын 1885, PDF с.193",
       "external_url": "",
-      "notes": "Есть одноимённые населённые пункты"
+      "notes": "Есть одноимённые населённые пункты",
+      "map_target": {
+        "latitude": 58.5966,
+        "longitude": 49.6601,
+        "radius_km": 430,
+        "kind": "GUBERNIA",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Историческая Вятская губерния: Кобра не отождествлена",
+        "anchor_source": "",
+        "explanation": "Для села Кобра не установлен исторический уезд и не доказан современный аналог"
+      }
     },
     {
       "id": "A021",
@@ -426,7 +630,17 @@
       "page_label": "Спицын 1885, PDF с.194",
       "source": "Спицын 1885, PDF с.194",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.5966,
+        "longitude": 49.6601,
+        "radius_km": 18,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Киров (историческая Вятка)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Речка Хлыновка у Вятки, точный участок найденного клада неизвестен"
+      }
     },
     {
       "id": "A022",
@@ -445,7 +659,17 @@
       "page_label": "Спицын 1885, PDF с.193",
       "source": "Спицын 1885, PDF с.193",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.1393,
+        "longitude": 52.658,
+        "radius_km": 140,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Глазов",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Указана только Порезская волость Глазовского уезда"
+      }
     },
     {
       "id": "A023",
@@ -464,7 +688,17 @@
       "page_label": "Худяков 1916, PDF с.223–224",
       "source": "Худяков 1916, PDF с.223–224",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 32,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Урочище «Атамановы Кости» между историческими селениями около Малмыжа"
+      }
     },
     {
       "id": "A024",
@@ -483,7 +717,17 @@
       "page_label": "Худяков 1916, PDF с.233–244",
       "source": "Худяков 1916, PDF с.233–244",
       "external_url": "",
-      "notes": "Нельзя фиксировать одну точку"
+      "notes": "Нельзя фиксировать одну точку",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 14,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Есть две версии на разных берегах местной Мокши"
+      }
     },
     {
       "id": "A025",
@@ -502,7 +746,17 @@
       "page_label": "Спицын 1885, PDF с.194–196",
       "source": "Спицын 1885, PDF с.194–196",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.58,
+        "longitude": 49,
+        "radius_km": 8,
+        "kind": "NATURAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Утёс Чимбулат на реке Немде",
+        "anchor_source": "https://komanda-k.ru/россия/памятники-геологии-кировской-области",
+        "explanation": "Исторический утёс и святилище на Немде"
+      }
     },
     {
       "id": "A026",
@@ -521,7 +775,17 @@
       "page_label": "Спицын 1885, PDF с.192–194",
       "source": "Спицын 1885, PDF с.192–194",
       "external_url": "",
-      "notes": "Не ударные кратеры"
+      "notes": "Не ударные кратеры",
+      "map_target": {
+        "latitude": 57.58,
+        "longitude": 49,
+        "radius_km": 23,
+        "kind": "NATURAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Утёс Чимбулат на реке Немде",
+        "anchor_source": "https://komanda-k.ru/россия/памятники-геологии-кировской-области",
+        "explanation": "Природные провалы около Чимбулата, точные участки не выяснены"
+      }
     },
     {
       "id": "A027",
@@ -540,7 +804,17 @@
       "page_label": "Спицын 1885, PDF с.193",
       "source": "Спицын 1885, PDF с.193",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.635,
+        "longitude": 51.66,
+        "radius_km": 24,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котловка близ устья Вятки, примерный ориентир",
+        "anchor_source": "https://komanda-k.ru/татарстан/устье-реки-вятка-–-река-кама-мамадышский-район-рт",
+        "explanation": "Зубы и бивни мамонта в окрестностях Котловки и в нескольких верстах"
+      }
     },
     {
       "id": "A028",
@@ -559,7 +833,17 @@
       "page_label": "Спицын 1885, PDF с.193",
       "source": "Спицын 1885, PDF с.193",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 58.77,
+        "longitude": 47.95,
+        "radius_km": 45,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Район Даровского, ориентир (нужно уточнить)",
+        "anchor_source": "",
+        "explanation": "Челюсть мамонта найдена возле исторического села Даровского"
+      }
     },
     {
       "id": "A029",
@@ -578,7 +862,17 @@
       "page_label": "Рычков, Отрывки из путешественников XVIII в.",
       "source": "Рычков, Отрывки из путешественников XVIII в.",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.3720495,
+        "longitude": 49.9553265,
+        "radius_km": 17,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Буйский Перевоз",
+        "anchor_source": "https://kir.2rus.org/buyskiy_perevoz/karta/yandex/",
+        "explanation": "Береговой разрез в районе Буйского Перевоза; положение обнажения неизвестно"
+      }
     },
     {
       "id": "A030",
@@ -597,7 +891,17 @@
       "page_label": "Календарь 1893, PDF с.211",
       "source": "Календарь 1893, PDF с.211",
       "external_url": "",
-      "notes": "Не метеорит"
+      "notes": "Не метеорит",
+      "map_target": {
+        "latitude": 58.2,
+        "longitude": 50.1,
+        "radius_km": 500,
+        "kind": "GUBERNIA",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Очень широкий исторический Вятский край, не место находки",
+        "anchor_source": "",
+        "explanation": "Обобщённый фольклор по губернии, не конкретная точка археологических находок"
+      }
     },
     {
       "id": "M001",
@@ -616,7 +920,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=56567",
-      "notes": "Не точка падения"
+      "notes": "Не точка падения",
+      "map_target": {
+        "latitude": 57.781167,
+        "longitude": 47.679667,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Karavannoe",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=56567",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M002",
@@ -635,7 +949,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.php?code=24193",
-      "notes": "Не точка падения"
+      "notes": "Не точка падения",
+      "map_target": {
+        "latitude": 57.533333,
+        "longitude": 49,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Vyatka",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24193",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M003",
@@ -654,7 +978,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=71724",
-      "notes": "Не точка падения"
+      "notes": "Не точка падения",
+      "map_target": {
+        "latitude": 57.340333,
+        "longitude": 48.5025,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Pizhanka",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=71724",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M004",
@@ -673,7 +1007,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=17979",
-      "notes": "Сарапульский уезд — место наблюдения"
+      "notes": "Сарапульский уезд — место наблюдения",
+      "map_target": {
+        "latitude": 57.783333,
+        "longitude": 55.266667,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Ochansk",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=17979",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M005",
@@ -692,7 +1036,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.php?code=12229",
-      "notes": "Не контур поля рассеяния"
+      "notes": "Не контур поля рассеяния",
+      "map_target": {
+        "latitude": 55.433333,
+        "longitude": 53.25,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Kainsaz",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12229",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M006",
@@ -711,7 +1065,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.php?code=12324",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 54.866667,
+        "longitude": 50.883333,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Kissij",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12324",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "M007",
@@ -730,7 +1094,17 @@
       "page_label": "Meteoritical Bulletin",
       "source": "Meteoritical Bulletin",
       "external_url": "https://www.lpi.usra.edu/meteor/metbull.php?code=24169",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.8,
+        "longitude": 45.8,
+        "radius_km": 1.5,
+        "kind": "CATALOG_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Vetluga",
+        "anchor_source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24169",
+        "explanation": "Круг — визуальный обзор вокруг каталожной точки, а не установленная точность падения"
+      }
     },
     {
       "id": "I001",
@@ -749,7 +1123,17 @@
       "page_label": "ГЕОХИ РАН",
       "source": "ГЕОХИ РАН",
       "external_url": "",
-      "notes": "Не точка отдельного метеорита"
+      "notes": "Не точка отдельного метеорита",
+      "map_target": {
+        "latitude": 54.916667,
+        "longitude": 48.033333,
+        "radius_km": 5,
+        "kind": "STRUCTURE_OVERVIEW",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Карлинская астроблема",
+        "anchor_source": "",
+        "explanation": "Примерный радиус геологической структуры; не погрешность координат"
+      }
     },
     {
       "id": "B001",
@@ -768,7 +1152,17 @@
       "page_label": "",
       "source": "Внешняя публикация",
       "external_url": "https://www.urzhum-uezd.ortox.ru/arkhiv__nasledija_%3A_2020_god/view/id/1209504",
-      "notes": "Нужно сверить оригинал"
+      "notes": "Нужно сверить оригинал",
+      "map_target": {
+        "latitude": 57.83351,
+        "longitude": 50.05895,
+        "radius_km": 80,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Суна, ориентир Сунской волости",
+        "anchor_source": "https://mapcarta.com/13318150",
+        "explanation": "Сунская волость; деревня Козлецкая ещё не отождествлена"
+      }
     },
     {
       "id": "B002",
@@ -787,7 +1181,17 @@
       "page_label": "159",
       "source": "DOC DOC-0043 PDF 159",
       "external_url": "",
-      "notes": "Нужно сверить оригинал"
+      "notes": "Нужно сверить оригинал",
+      "map_target": {
+        "latitude": 58.84326,
+        "longitude": 50.85289,
+        "radius_km": 5,
+        "kind": "OBSERVATION_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Холуницкий завод",
+        "anchor_source": "",
+        "explanation": "Круг показан вокруг города, откуда наблюдали небесное явление; это НЕ район падения"
+      }
     },
     {
       "id": "B003",
@@ -806,7 +1210,17 @@
       "page_label": "",
       "source": "Внешняя публикация",
       "external_url": "https://tunguska.tsc.ru/ru/science/mat/oche/31-60/60/",
-      "notes": "Нужно сверить оригинал"
+      "notes": "Нужно сверить оригинал",
+      "map_target": {
+        "latitude": 58.603,
+        "longitude": 49.668,
+        "radius_km": 5,
+        "kind": "OBSERVATION_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "Вятка — зелёный болид",
+        "anchor_source": "https://tunguska.tsc.ru/ru/science/mat/oche/31-60/60/",
+        "explanation": "Круг показан вокруг города, откуда наблюдали небесное явление; это НЕ район падения"
+      }
     },
     {
       "id": "KAM-01",
@@ -825,7 +1239,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.0486,
+        "longitude": 53.9872,
+        "radius_km": 35,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Воткинск, Удмуртия",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Воткинское городище: городской ориентир, а не площадка"
+      }
     },
     {
       "id": "KAM-02",
@@ -844,7 +1268,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 57.0486,
+        "longitude": 53.9872,
+        "radius_km": 50,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Воткинск, Удмуртия",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Пиздерское городище; положение пока не проверено"
+      }
     },
     {
       "id": "KAM-03",
@@ -863,7 +1297,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 70,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Дуванакское городище: примерный северный участок камских укреплений"
+      }
     },
     {
       "id": "KAM-04",
@@ -882,7 +1326,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 15,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Нечкинское укрепление: ориентир современного села"
+      }
     },
     {
       "id": "KAM-05",
@@ -901,7 +1355,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 27,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Первый из условно разделённых участков Усть-Нечкинского укрепления"
+      }
     },
     {
       "id": "KAM-06",
@@ -920,7 +1384,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 27,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Второй условный участок Усть-Нечкинского; отдельно не локализован"
+      }
     },
     {
       "id": "KAM-07",
@@ -939,7 +1413,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 42,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Яромазское: только ориентир по камскому участку"
+      }
     },
     {
       "id": "KAM-08",
@@ -958,7 +1442,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 70,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сарапул, Удмуртия",
+        "anchor_source": "https://time-in.ru/coordinates/sarapul",
+        "explanation": "Чупиха: у автора камские укрепления между Сивой и Ижом"
+      }
     },
     {
       "id": "KAM-09",
@@ -977,7 +1471,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 65,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сарапул, Удмуртия",
+        "anchor_source": "https://time-in.ru/coordinates/sarapul",
+        "explanation": "Непряхинское: прибрежный исторический участок без точной привязки"
+      }
     },
     {
       "id": "KAM-10",
@@ -996,7 +1500,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 70,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сарапул, Удмуртия",
+        "anchor_source": "https://time-in.ru/coordinates/sarapul",
+        "explanation": "Межнинское: указывается принадлежность к камской группе"
+      }
     },
     {
       "id": "KAM-11",
@@ -1015,7 +1529,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 70,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сарапул, Удмуртия",
+        "anchor_source": "https://time-in.ru/coordinates/sarapul",
+        "explanation": "Сухаровское: историческая прибрежная зона"
+      }
     },
     {
       "id": "KAM-12",
@@ -1034,7 +1558,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 56.4763,
+        "longitude": 53.7978,
+        "radius_km": 70,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сарапул, Удмуртия",
+        "anchor_source": "https://time-in.ru/coordinates/sarapul",
+        "explanation": "Машарское: прибрежная группа Сарапульского уезда"
+      }
     },
     {
       "id": "KAM-13",
@@ -1053,7 +1587,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.01052,
+        "longitude": 53.70517,
+        "radius_km": 24,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Каракулино, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13451338",
+        "explanation": "Первое Каракулинское: пока известен ориентир села"
+      }
     },
     {
       "id": "KAM-14",
@@ -1072,7 +1616,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.01052,
+        "longitude": 53.70517,
+        "radius_km": 24,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Каракулино, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13451338",
+        "explanation": "Второе Каракулинское: площадка отдельно не найдена"
+      }
     },
     {
       "id": "KAM-15",
@@ -1091,7 +1645,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.01052,
+        "longitude": 53.70517,
+        "radius_km": 60,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Каракулино, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13451338",
+        "explanation": "Юньгинские укрепления: используется район Каракулина, точные места не установлены"
+      }
     },
     {
       "id": "KAM-16",
@@ -1110,7 +1674,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 56.01052,
+        "longitude": 53.70517,
+        "radius_km": 60,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Каракулино, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13451338",
+        "explanation": "Второе Юньгинское: то же широкое географическое ограничение"
+      }
     },
     {
       "id": "KAM-17",
@@ -1129,7 +1703,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 42,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Колесниковское: примерная часть камского правобережья возле Чеганды"
+      }
     },
     {
       "id": "KAM-18",
@@ -1148,7 +1732,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Первое Чегандинское: ориентир исторического села"
+      }
     },
     {
       "id": "KAM-19",
@@ -1167,7 +1761,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Второе Чегандинское: площадка не локализована отдельно"
+      }
     },
     {
       "id": "KAM-20",
@@ -1186,7 +1790,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 66,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Ныргидинское: географическое соседство требует проверки"
+      }
     },
     {
       "id": "KAM-21",
@@ -1205,7 +1819,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 78,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Первое Зуевское: широкая зона нижнего участка Камы"
+      }
     },
     {
       "id": "KAM-22",
@@ -1224,7 +1848,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.95432,
+        "longitude": 53.52022,
+        "radius_km": 78,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Чеганда, Удмуртия",
+        "anchor_source": "https://mapcarta.com/13484964",
+        "explanation": "Второе Зуевское: широкий ориентир, не площадка"
+      }
     },
     {
       "id": "KAM-23",
@@ -1243,7 +1877,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 62,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Первое Малиновское: широкая часть камского коридора"
+      }
     },
     {
       "id": "KAM-24",
@@ -1262,7 +1906,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 62,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Второе Малиновское: широкий ориентир"
+      }
     },
     {
       "id": "KAM-25",
@@ -1281,7 +1935,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 62,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Первое Муновское: отдельное городище, не Мушинский могильник"
+      }
     },
     {
       "id": "KAM-26",
@@ -1300,7 +1964,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями."
+      "notes": "Парное название в первоисточнике; номера 1/2 введены для учёта, не являются историческими названиями.",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 62,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Второе Муновское: география не локализована"
+      }
     },
     {
       "id": "KAM-27",
@@ -1319,7 +1993,17 @@
       "page_label": "235",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": ""
+      "notes": "",
+      "map_target": {
+        "latitude": 55.89,
+        "longitude": 53.08,
+        "radius_km": 18,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+        "anchor_source": "",
+        "explanation": "Пьяноборское городище: район исторического Пьяного Бора"
+      }
     },
     {
       "id": "IZH-01",
@@ -1338,7 +2022,17 @@
       "page_label": "236",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Не входит в перечисленную группу «27 камских»"
+      "notes": "Не входит в перечисленную группу «27 камских»",
+      "map_target": {
+        "latitude": 56.8498,
+        "longitude": 53.2045,
+        "radius_km": 110,
+        "kind": "BASIN",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Ижевск, бассейн реки Иж (широкий ориентир)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Бобья-Учинское: бассейн Ижа и Тоймы, точные координаты неизвестны"
+      }
     },
     {
       "id": "IZH-02",
@@ -1357,7 +2051,17 @@
       "page_label": "236",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Не входит в перечисленную группу «27 камских»"
+      "notes": "Не входит в перечисленную группу «27 камских»",
+      "map_target": {
+        "latitude": 56.8498,
+        "longitude": 53.2045,
+        "radius_km": 110,
+        "kind": "BASIN",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Ижевск, бассейн реки Иж (широкий ориентир)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Варзи-Ятчинское: бассейн Ижа и Тоймы, точное поле неизвестно"
+      }
     },
     {
       "id": "IZH-03",
@@ -1376,7 +2080,17 @@
       "page_label": "236",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Не входит в перечисленную группу «27 камских»"
+      "notes": "Не входит в перечисленную группу «27 камских»",
+      "map_target": {
+        "latitude": 56.8498,
+        "longitude": 53.2045,
+        "radius_km": 120,
+        "kind": "BASIN",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Ижевск, бассейн реки Иж (широкий ориентир)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Дюзебаевское: только широкая группа по Ижу и Тойме"
+      }
     },
     {
       "id": "IZH-04",
@@ -1395,7 +2109,17 @@
       "page_label": "236",
       "source": "Спицын, Вещественные памятники, 1890",
       "external_url": "",
-      "notes": "Не входит в перечисленную группу «27 камских»"
+      "notes": "Не входит в перечисленную группу «27 камских»",
+      "map_target": {
+        "latitude": 56.8498,
+        "longitude": 53.2045,
+        "radius_km": 120,
+        "kind": "BASIN",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Ижевск, бассейн реки Иж (широкий ориентир)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Утчанское: только широкая группа по Ижу и Тойме"
+      }
     },
     {
       "id": "MAL-01",
@@ -1414,7 +2138,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Период — атрибуция автора 1916, требует современной проверки"
+      "notes": "Период — атрибуция автора 1916, требует современной проверки",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 105,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Скати / Новошеново — Порекская волость, не отождествлено"
+      }
     },
     {
       "id": "MAL-02",
@@ -1433,7 +2167,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Нет обстоятельств находки"
+      "notes": "Нет обстоятельств находки",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Рыбная Ватага: историческое название без подтверждённого современного пункта"
+      }
     },
     {
       "id": "MAL-03",
@@ -1452,7 +2196,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Ранее встречались спорные фантастические толкования топонима, не принимать их"
+      "notes": "Ранее встречались спорные фантастические толкования топонима, не принимать их",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 95,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Верх-Гоньба: широкое размещение Малмыжского уезда"
+      }
     },
     {
       "id": "MAL-04",
@@ -1471,7 +2225,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Координату речной линии не приравнивать к точке находки"
+      "notes": "Координату речной линии не приравнивать к точке находки",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 70,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Находки по Шошме, без точного участка реки"
+      }
     },
     {
       "id": "MAL-05",
@@ -1490,7 +2254,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Установить старое название и положение"
+      "notes": "Установить старое название и положение",
+      "map_target": {
+        "latitude": 56.9436,
+        "longitude": 51.0666,
+        "radius_km": 100,
+        "kind": "BASIN",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Кильмезь, Кировская область",
+        "anchor_source": "https://www.komandirovka.ru/cities/kilmez_kir._obl./",
+        "explanation": "Починок Павлуничи у Кильмези не локализован, используется бассейн реки"
+      }
     },
     {
       "id": "MAL-06",
@@ -1509,7 +2283,17 @@
       "page_label": "223",
       "source": "Исторический очерк Малмыжского края, PDF с. 223",
       "external_url": "",
-      "notes": "Этнокультурная атрибуция автора не подтверждена независимо"
+      "notes": "Этнокультурная атрибуция автора не подтверждена независимо",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 100,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Аргыж, Порекская волость: место городища не найдено"
+      }
     },
     {
       "id": "MAL-08",
@@ -1528,7 +2312,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Точная точка и музейная судьба неизвестны"
+      "notes": "Точная точка и музейная судьба неизвестны",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 120,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Киперь, Рожкинская волость: только волостное описание"
+      }
     },
     {
       "id": "MAL-09",
@@ -1547,7 +2341,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Не приписывать предметам форму без описания"
+      "notes": "Не приписывать предметам форму без описания",
+      "map_target": {
+        "latitude": 57.11199,
+        "longitude": 51.61441,
+        "radius_km": 85,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сюмси, Удмуртия",
+        "anchor_source": "https://mapcarta.com/W64942664",
+        "explanation": "Починок Тарасова в Сюмсинской волости, широкий район"
+      }
     },
     {
       "id": "MAL-10",
@@ -1566,7 +2370,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Сведения о шахтах — предание, не факт"
+      "notes": "Сведения о шахтах — предание, не факт",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Китяк: древние копи упоминаются лишь в неподтверждённом предании"
+      }
     },
     {
       "id": "MAL-11",
@@ -1585,7 +2399,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Возраст памятника неизвестен автору"
+      "notes": "Возраст памятника неизвестен автору",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 110,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Люсинерь, Арборская волость: курганная группа без координат"
+      }
     },
     {
       "id": "MAL-12",
@@ -1604,7 +2428,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Возраст памятника неизвестен автору"
+      "notes": "Возраст памятника неизвестен автору",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 115,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Новая Тушка, Рожкинская волость: без точного места"
+      }
     },
     {
       "id": "MAL-13",
@@ -1623,7 +2457,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Восстановить старое русло перед геопривязкой"
+      "notes": "Восстановить старое русло перед геопривязкой",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 70,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Старый Бурец, левый берег Вятки, историческое русло требует реконструкции"
+      }
     },
     {
       "id": "MAL-14",
@@ -1642,7 +2486,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Название деревни не доказывает легенды о богатырях"
+      "notes": "Название деревни не доказывает легенды о богатырях",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 115,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Богатырский Бугор, Порекская волость, населённый пункт не отождествлён"
+      }
     },
     {
       "id": "MAL-15",
@@ -1661,7 +2515,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Современный топоним уточнить"
+      "notes": "Современный топоним уточнить",
+      "map_target": {
+        "latitude": 57.11199,
+        "longitude": 51.61441,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Сюмси, Удмуртия",
+        "anchor_source": "https://mapcarta.com/W64942664",
+        "explanation": "Бодья в Сюмсинской волости, район только ориентировочный"
+      }
     },
     {
       "id": "MAL-16",
@@ -1680,7 +2544,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Не путать с рекой Кильмезью"
+      "notes": "Не путать с рекой Кильмезью",
+      "map_target": {
+        "latitude": 56.9436,
+        "longitude": 51.0666,
+        "radius_km": 55,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Кильмезь, Кировская область",
+        "anchor_source": "https://www.komandirovka.ru/cities/kilmez_kir._obl./",
+        "explanation": "Курган у села Кильмезь: не доказано, что это современная площадка"
+      }
     },
     {
       "id": "MAL-17",
@@ -1699,7 +2573,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Два названия относятся, по тексту, к одному починку"
+      "notes": "Два названия относятся, по тексту, к одному починку",
+      "map_target": {
+        "latitude": 56.9436,
+        "longitude": 51.0666,
+        "radius_km": 105,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Кильмезь, Кировская область",
+        "anchor_source": "https://www.komandirovka.ru/cities/kilmez_kir._obl./",
+        "explanation": "Кошколетов/Мереклес, Кильмезская волость, село не найдено"
+      }
     },
     {
       "id": "MAL-18",
@@ -1718,7 +2602,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Нужна проверка происхождения вала"
+      "notes": "Нужна проверка происхождения вала",
+      "map_target": {
+        "latitude": 56.9436,
+        "longitude": 51.0666,
+        "radius_km": 100,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Кильмезь, Кировская область",
+        "anchor_source": "https://www.komandirovka.ru/cities/kilmez_kir._obl./",
+        "explanation": "Комиссары, Кильмезская волость, местоположение вала не проверено"
+      }
     },
     {
       "id": "MAL-19",
@@ -1737,7 +2631,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Не выдавать предположение за обнаруженный памятник"
+      "notes": "Не выдавать предположение за обнаруженный памятник",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 115,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Богатырский Мыс, Порекская волость: предполагаемое городище"
+      }
     },
     {
       "id": "MAL-20",
@@ -1756,7 +2660,17 @@
       "page_label": "224",
       "source": "Исторический очерк Малмыжского края, PDF с. 224",
       "external_url": "",
-      "notes": "Возможны изменения устья и берега"
+      "notes": "Возможны изменения устья и берега",
+      "map_target": {
+        "latitude": 56.5237,
+        "longitude": 50.6841,
+        "radius_km": 120,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Малмыж",
+        "anchor_source": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php",
+        "explanation": "Шугуракский Мыс у Шабанки; устье не реконструировано"
+      }
     },
     {
       "id": "BOL-1900-06-01",
@@ -1775,7 +2689,17 @@
       "page_label": "180",
       "source": "Хроника/краеведческий источник",
       "external_url": "",
-      "notes": "Год события 1900, том на 1901. Координата центра города не соответствует траектории."
+      "notes": "Год события 1900, том на 1901. Координата центра города не соответствует траектории.",
+      "map_target": {
+        "latitude": 58.603,
+        "longitude": 49.668,
+        "radius_km": 5,
+        "kind": "OBSERVATION_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "город Вятка — наблюдение 1900-06-01",
+        "anchor_source": "",
+        "explanation": "Круг показан вокруг города, откуда наблюдали небесное явление; это НЕ район падения"
+      }
     },
     {
       "id": "BOL-1902-12-08_09",
@@ -1794,7 +2718,17 @@
       "page_label": "",
       "source": "Хроника/краеведческий источник",
       "external_url": "https://www.urzhum-uezd.ortox.ru/arkhiv__nasledija_%3A_2020_god/view/id/1210954",
-      "notes": "Ссылка перепечатки: памятная книжка за 1902 год, издание 1903, печ. с.115–130; оригинал этого места пока не локализован в PDF."
+      "notes": "Ссылка перепечатки: памятная книжка за 1902 год, издание 1903, печ. с.115–130; оригинал этого места пока не локализован в PDF.",
+      "map_target": {
+        "latitude": 58.603,
+        "longitude": 49.668,
+        "radius_km": 5,
+        "kind": "OBSERVATION_POINT",
+        "level": "SOURCE_OR_EXISTING_POINT",
+        "anchor_name": "город Вятка — наблюдение 1902-12-08 / 1902-12-09",
+        "anchor_source": "https://www.urzhum-uezd.ortox.ru/arkhiv__nasledija_%3A_2020_god/view/id/1210954",
+        "explanation": "Круг показан вокруг города, откуда наблюдали небесное явление; это НЕ район падения"
+      }
     },
     {
       "id": "R04-C001",
@@ -1813,7 +2747,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "проверить топонимы Заболотская, Пихтосская, Лелековская"
+      "notes": "проверить топонимы Заболотская, Пихтосская, Лелековская",
+      "map_target": {
+        "latitude": 58.3089,
+        "longitude": 48.348,
+        "radius_km": 100,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котельнич",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Заболотская, Батаевская волость Котельнического уезда"
+      }
     },
     {
       "id": "R04-C002",
@@ -1832,7 +2776,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "найти статью Лерха и географию"
+      "notes": "найти статью Лерха и географию",
+      "map_target": {
+        "latitude": 55.76,
+        "longitude": 52.05,
+        "radius_km": 115,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Елабуга, Татарстан (городской ориентир)",
+        "anchor_source": "",
+        "explanation": "Елабужский уезд: точное место находки Лерха не указано"
+      }
     },
     {
       "id": "R04-C003",
@@ -1851,7 +2805,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "не определять место находки по местожительству владельца"
+      "notes": "не определять место находки по местожительству владельца",
+      "map_target": {
+        "latitude": 58.7322,
+        "longitude": 50.1772,
+        "radius_km": 95,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Слободской",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Слободской уезд: только уездное происхождение предметов"
+      }
     },
     {
       "id": "R04-C004",
@@ -1870,7 +2834,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "проверить материал и место поля"
+      "notes": "проверить материал и место поля",
+      "map_target": {
+        "latitude": 58.3089,
+        "longitude": 48.348,
+        "radius_km": 100,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котельнич",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Сорвижское, Котельнический уезд, село не сопоставлено"
+      }
     },
     {
       "id": "R04-C005",
@@ -1889,7 +2863,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "сверить Городок и Шабалины"
+      "notes": "сверить Городок и Шабалины",
+      "map_target": {
+        "latitude": 58.3089,
+        "longitude": 48.348,
+        "radius_km": 75,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котельнич",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Городок (Шабалины), близ Котельнича, не локализован"
+      }
     },
     {
       "id": "R04-C006",
@@ -1908,7 +2892,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "найти музейную опись"
+      "notes": "найти музейную опись",
+      "map_target": {
+        "latitude": 55.76,
+        "longitude": 52.05,
+        "radius_km": 85,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Елабуга, Татарстан (городской ориентир)",
+        "anchor_source": "",
+        "explanation": "Танайка, Елабужский уезд, конкретное поле не локализовано"
+      }
     },
     {
       "id": "R04-C007",
@@ -1927,7 +2921,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "разделить коллекцию по местам находки"
+      "notes": "разделить коллекцию по местам находки",
+      "map_target": {
+        "latitude": 57.1141,
+        "longitude": 49.9996,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Уржум",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Чумбари, Уржумский уезд, населённый пункт не подтверждён"
+      }
     },
     {
       "id": "R04-C008",
@@ -1946,7 +2950,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "выявить исторический топоним"
+      "notes": "выявить исторический топоним",
+      "map_target": {
+        "latitude": 57.1141,
+        "longitude": 49.9996,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Уржум",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Новая Оришуть, Уржумский уезд, не сопоставлено"
+      }
     },
     {
       "id": "R04-C009",
@@ -1965,7 +2979,17 @@
       "page_label": "36",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "учитель мог передать находку из иного места"
+      "notes": "учитель мог передать находку из иного места",
+      "map_target": {
+        "latitude": 57.5848,
+        "longitude": 48.9584,
+        "radius_km": 50,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Советск (Кукарка)",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Передача наконечника учителем Кукарки, место обнаружения неизвестно"
+      }
     },
     {
       "id": "R04-C010",
@@ -1984,7 +3008,17 @@
       "page_label": "192",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "не считать легенду установленной находкой"
+      "notes": "не считать легенду установленной находкой",
+      "map_target": {
+        "latitude": 58.1393,
+        "longitude": 52.658,
+        "radius_km": 220,
+        "kind": "REGIONAL",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Глазов",
+        "anchor_source": "https://your-online.ru/coordinates/ru/udmurtija",
+        "explanation": "Зюздинский край и высоты Зуй-кар, современная точка не установлена"
+      }
     },
     {
       "id": "R04-C011",
@@ -2003,7 +3037,17 @@
       "page_label": "192",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "проверить урочище по старой карте"
+      "notes": "проверить урочище по старой карте",
+      "map_target": {
+        "latitude": 58.3089,
+        "longitude": 48.348,
+        "radius_km": 28,
+        "kind": "RIVER",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Котельнич",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Марьева веретья на противоположной стороне Вятки у Котельнича"
+      }
     },
     {
       "id": "R04-C012",
@@ -2022,7 +3066,17 @@
       "page_label": "192",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "проверить геологический генезис"
+      "notes": "проверить геологический генезис",
+      "map_target": {
+        "latitude": 57.1141,
+        "longitude": 49.9996,
+        "radius_km": 105,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Уржум",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Русско-Шойское, Уржумский уезд, провалы не локализованы"
+      }
     },
     {
       "id": "R04-C013",
@@ -2041,7 +3095,17 @@
       "page_label": "193",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "разыскать первичную статью и определить тип памятника"
+      "notes": "разыскать первичную статью и определить тип памятника",
+      "map_target": {
+        "latitude": 58.78709,
+        "longitude": 48.43628,
+        "radius_km": 52,
+        "kind": "SETTLEMENT",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Село Окатьево",
+        "anchor_source": "https://www.komandirovka.ru/cities/okatevo/",
+        "explanation": "Тунгусовская, Окатьевский приход, место древнего жилища неизвестно"
+      }
     },
     {
       "id": "R04-C014",
@@ -2060,7 +3124,17 @@
       "page_label": "193",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "идентифицировать предметы без датировки по этнониму"
+      "notes": "идентифицировать предметы без датировки по этнониму",
+      "map_target": {
+        "latitude": 56.6489755,
+        "longitude": 53.7611465,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Нечкино, Удмуртия",
+        "anchor_source": "https://ud.2rus.org/nechkino/karta/",
+        "explanation": "Лагунова в Нечкинской волости, не подтверждена геопривязка"
+      }
     },
     {
       "id": "R04-C015",
@@ -2079,7 +3153,17 @@
       "page_label": "207",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "уточнить Оришуть и Новую Оришуть, не смешивать"
+      "notes": "уточнить Оришуть и Новую Оришуть, не смешивать",
+      "map_target": {
+        "latitude": 57.1141,
+        "longitude": 49.9996,
+        "radius_km": 90,
+        "kind": "UEZD",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Уржум",
+        "anchor_source": "https://your-online.ru/coordinates/ru/kirovskaja-oblast",
+        "explanation": "Оришуть, Уржумский уезд, конкретная деревня не доказана"
+      }
     },
     {
       "id": "R04-C016",
@@ -2098,7 +3182,17 @@
       "page_label": "35",
       "source": "Вятский календарь (историческая публикация)",
       "external_url": "",
-      "notes": "нанести маршрут только после привязки остановок"
+      "notes": "нанести маршрут только после привязки остановок",
+      "map_target": {
+        "latitude": 58.2,
+        "longitude": 50.1,
+        "radius_km": 500,
+        "kind": "GUBERNIA",
+        "level": "APPROXIMATE_ANCHOR_NOT_FIND_SITE",
+        "anchor_name": "Очень широкий исторический Вятский край, не место находки",
+        "anchor_source": "",
+        "explanation": "Маршрут экспедиции с несколькими уездами; круг лишь условно охватывает регион"
+      }
     }
   ],
   "documents": [
@@ -4964,5 +6058,223 @@
       "Статус": "PREPARED_NOT_EXECUTED",
       "Примечание": "Среда контейнера не отвечает. Не заявлять, что файлы на диске G: уже созданы."
     }
-  ]
+  ],
+  "geo_anchor_catalog": {
+    "Vyatka": {
+      "latitude": 58.5966,
+      "longitude": 49.6601,
+      "name": "Киров (историческая Вятка)",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Kotelnich": {
+      "latitude": 58.3089,
+      "longitude": 48.348,
+      "name": "Котельнич",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Slobodskoy": {
+      "latitude": 58.7322,
+      "longitude": 50.1772,
+      "name": "Слободской",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Yaransk": {
+      "latitude": 57.3033,
+      "longitude": 47.8861,
+      "name": "Яранск",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Urzhum": {
+      "latitude": 57.1141,
+      "longitude": 49.9996,
+      "name": "Уржум",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Sovetsk": {
+      "latitude": 57.5848,
+      "longitude": 48.9584,
+      "name": "Советск (Кукарка)",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "BHolunitsa": {
+      "latitude": 58.84,
+      "longitude": 50.8528,
+      "name": "Белая Холуница",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Okatyevo": {
+      "latitude": 58.78709,
+      "longitude": 48.43628,
+      "name": "Село Окатьево",
+      "url": "https://www.komandirovka.ru/cities/okatevo/"
+    },
+    "Istobensk": {
+      "latitude": 58.41487,
+      "longitude": 48.78856,
+      "name": "Село Истобенск",
+      "url": "https://mapcarta.com/W47295562"
+    },
+    "MolomaMouth": {
+      "latitude": 58.338,
+      "longitude": 48.46,
+      "name": "Нижнее течение Моломы, условный ориентир",
+      "url": ""
+    },
+    "YumaMouth": {
+      "latitude": 57.92444,
+      "longitude": 47.73889,
+      "name": "Устье Юмы при впадении в Пижму",
+      "url": "https://komanda-k.ru/россия/река-юма"
+    },
+    "PizhmaLower": {
+      "latitude": 57.5848,
+      "longitude": 48.9584,
+      "name": "Низовья Пижмы у Кукарки",
+      "url": "https://your-online.ru/coordinates/ru/kirovskaja-oblast"
+    },
+    "Buyskiy": {
+      "latitude": 57.3720495,
+      "longitude": 49.9553265,
+      "name": "Буйский Перевоз",
+      "url": "https://kir.2rus.org/buyskiy_perevoz/karta/yandex/"
+    },
+    "Chumbylat": {
+      "latitude": 57.58,
+      "longitude": 49,
+      "name": "Утёс Чимбулат на реке Немде",
+      "url": "https://komanda-k.ru/россия/памятники-геологии-кировской-области"
+    },
+    "Darovskoy": {
+      "latitude": 58.77,
+      "longitude": 47.95,
+      "name": "Район Даровского, ориентир (нужно уточнить)",
+      "url": ""
+    },
+    "KirovFila": {
+      "latitude": 58.65,
+      "longitude": 49.65,
+      "name": "Филейская сторона города Вятки (условный ориентир)",
+      "url": ""
+    },
+    "KobraUnknown": {
+      "latitude": 58.5966,
+      "longitude": 49.6601,
+      "name": "Историческая Вятская губерния: Кобра не отождествлена",
+      "url": ""
+    },
+    "Malmyzh": {
+      "latitude": 56.5237,
+      "longitude": 50.6841,
+      "name": "Малмыж",
+      "url": "https://na-meste.ru/kirovskaya-oblast/malmyzh.php"
+    },
+    "KilmezKirov": {
+      "latitude": 56.9436,
+      "longitude": 51.0666,
+      "name": "Кильмезь, Кировская область",
+      "url": "https://www.komandirovka.ru/cities/kilmez_kir._obl./"
+    },
+    "KilmezUdm": {
+      "latitude": 57.01384,
+      "longitude": 51.34056,
+      "name": "Кильмезь, Сюмсинский район Удмуртии (возможный одноимённый ориентир)",
+      "url": "https://mapcarta.com/13443066"
+    },
+    "Syumsi": {
+      "latitude": 57.11199,
+      "longitude": 51.61441,
+      "name": "Сюмси, Удмуртия",
+      "url": "https://mapcarta.com/W64942664"
+    },
+    "Glazov": {
+      "latitude": 58.1393,
+      "longitude": 52.658,
+      "name": "Глазов",
+      "url": "https://your-online.ru/coordinates/ru/udmurtija"
+    },
+    "Balezino": {
+      "latitude": 57.9787,
+      "longitude": 53.0138,
+      "name": "Балезино, Удмуртия",
+      "url": "https://your-online.ru/coordinates/ru/udmurtija"
+    },
+    "Elabuga": {
+      "latitude": 55.76,
+      "longitude": 52.05,
+      "name": "Елабуга, Татарстан (городской ориентир)",
+      "url": ""
+    },
+    "Kotlovka": {
+      "latitude": 55.635,
+      "longitude": 51.66,
+      "name": "Котловка близ устья Вятки, примерный ориентир",
+      "url": "https://komanda-k.ru/татарстан/устье-реки-вятка-–-река-кама-мамадышский-район-рт"
+    },
+    "PyanBor": {
+      "latitude": 55.89,
+      "longitude": 53.08,
+      "name": "Пьяный Бор / Красный Бор, Татарстан (ориентир)",
+      "url": ""
+    },
+    "Sarapul": {
+      "latitude": 56.4763,
+      "longitude": 53.7978,
+      "name": "Сарапул, Удмуртия",
+      "url": "https://time-in.ru/coordinates/sarapul"
+    },
+    "Votkinsk": {
+      "latitude": 57.0486,
+      "longitude": 53.9872,
+      "name": "Воткинск, Удмуртия",
+      "url": "https://your-online.ru/coordinates/ru/udmurtija"
+    },
+    "Nechkino": {
+      "latitude": 56.6489755,
+      "longitude": 53.7611465,
+      "name": "Нечкино, Удмуртия",
+      "url": "https://ud.2rus.org/nechkino/karta/"
+    },
+    "Karakulino": {
+      "latitude": 56.01052,
+      "longitude": 53.70517,
+      "name": "Каракулино, Удмуртия",
+      "url": "https://mapcarta.com/13451338"
+    },
+    "Cheganda": {
+      "latitude": 55.95432,
+      "longitude": 53.52022,
+      "name": "Чеганда, Удмуртия",
+      "url": "https://mapcarta.com/13484964"
+    },
+    "Izh": {
+      "latitude": 56.8498,
+      "longitude": 53.2045,
+      "name": "Ижевск, бассейн реки Иж (широкий ориентир)",
+      "url": "https://your-online.ru/coordinates/ru/udmurtija"
+    },
+    "Suna": {
+      "latitude": 57.83351,
+      "longitude": 50.05895,
+      "name": "Суна, ориентир Сунской волости",
+      "url": "https://mapcarta.com/13318150"
+    },
+    "KamaCorridor": {
+      "latitude": 56.4763,
+      "longitude": 53.7978,
+      "name": "Правобережье Камы между реками Сива и Иж (обобщённый ориентир)",
+      "url": "https://www.prlib.ru/item/906689"
+    },
+    "KirovGubernia": {
+      "latitude": 58.2,
+      "longitude": 50.1,
+      "name": "Очень широкий исторический Вятский край, не место находки",
+      "url": ""
+    },
+    "MalmyzhUezd": {
+      "latitude": 56.7,
+      "longitude": 50.9,
+      "name": "Малмыжский уезд, широкий условный ориентир",
+      "url": ""
+    }
+  }
 }
