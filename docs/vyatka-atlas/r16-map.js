@@ -82,6 +82,7 @@ function afterLoad(){
     if(tab==="legends")$r("status").textContent="Преданий и старинных рассказов: "+$r("list").querySelectorAll(".entry").length+". Доказанных кладов и точных мест здесь нет.";
     if(tab==="treasures")$r("status").textContent="Кладов и кладовых сообщений: "+$r("list").querySelectorAll(".entry").length;
     if(tab==="research")$r("status").textContent="Исследований и внешних источников: "+$r("list").querySelectorAll(".entry").length;
+    quickSync();
   };
   onSelect=function(id){
     if(tab==="legends"){
