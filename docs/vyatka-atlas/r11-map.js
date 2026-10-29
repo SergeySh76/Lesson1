@@ -41,6 +41,18 @@ function afterLoad(){
   if(canCluster){
     layer.on("clusterclick",function(e){
       if(e.originalEvent&&e.originalEvent.preventDefault)e.originalEvent.preventDefault();
+      const group=e.layer.getAllChildMarkers().map(m=>m._atlasRec).filter(Boolean);
+      group.sort((a,b)=>a.name.localeCompare(b.name,"ru"));
+      const detail=$r("detail");
+      if(detail&&group.length){
+        detail.innerHTML='<h3>Группа объектов ('+group.length+')</h3>'+
+          '<p>На этом участке карты сгруппировано несколько ориентиров. Выберите конкретную запись:</p>'+
+          '<div class="r11-group-list">'+group.map(r=>
+            '<button type="button" data-r11-select="'+esc(r.id)+'">'+
+            '<i class="r11-spot" style="background:'+esc(clr[r.category]||"#72869a")+'"></i>'+
+            esc(r.name)+' <small>'+esc(r.category)+'</small></button>').join("")+'</div>';
+        detail.scrollTop=0;
+      }
       const count=e.layer.getChildCount();
       if(count>16)e.layer.zoomToBounds();else e.layer.spiderfy();
     });
@@ -185,6 +197,12 @@ function afterLoad(){
       'Сплошной кружок обозначает исходную координату, пунктирный ободок — условный ориентир. '+
       'При нажатии данные выбранного объекта появляются в правой колонке; всплывающих окон на карте нет.</p>';
   }
+  document.addEventListener("click",function(event){
+    const button=event.target.closest("[data-r11-select]");
+    if(!button)return;
+    event.preventDefault();
+    choose(button.dataset.r11Select,true);
+  });
   renderLegend();
   updateMap();
   const existing=DATA.records.find(r=>r.id===selected);
