@@ -26,3 +26,8 @@
 .tabs button{cursor:default!important}
 .r11-legend-badge{font-size:11px;color:#6b7280;margin-left:4px}
 @media(max-width:800px){#r11-legend{padding:12px}#detail{max-height:440px}}
+
+.tabs{flex-wrap:wrap;gap:6px}
+.tabs button{cursor:default!important}
+#map .leaflet-container a,#map .leaflet-control,#map .leaflet-marker-icon{cursor:default!important}
+#detail .r11-treasure-details a{color:#1758a6}
