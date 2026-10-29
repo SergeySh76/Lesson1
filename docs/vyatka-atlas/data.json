@@ -8,7 +8,7 @@
     "website_repository": "SergeySh76/Lesson1",
     "repository_folder": "docs/vyatka-atlas",
     "data_source": "Google Sheets R07",
-    "source_sheet": "https://docs.google.com/spreadsheets/d/1SXxUvfzplVr50yCr8T2E6Rgk86-uNebi_DgBC3JpsRE/edit",
+    "source_sheet": "https://docs.google.com/spreadsheets/d/1jpwrJ-zFiQ60bwYsM3se6PQu9012erDytieFpmIiN04/edit",
     "caveats": [
       "Не все 55 PDF изучены постранично.",
       "Непроверенные географические точки не изображаются.",
@@ -30,7 +30,9 @@
       "Геология и метеориты: три официальных метеорита области подтверждены международным каталогом; народные «громовые стрелки» к ним не относятся.",
       "Палеонтология: Котельничское местонахождение научно подтверждено, но охраняемые раскопы не публикуются как точные места сбора.",
       "Впервые зарегистрированные даты кладов и даты последней монеты всегда хранятся отдельно."
-    ]
+    ],
+    "previous_sheet": "https://docs.google.com/spreadsheets/d/1SXxUvfzplVr50yCr8T2E6Rgk86-uNebi_DgBC3JpsRE/edit",
+    "research_sheet": "https://docs.google.com/spreadsheets/d/1jpwrJ-zFiQ60bwYsM3se6PQu9012erDytieFpmIiN04/edit"
   },
   "stats": {
     "records": 151,
