@@ -31,3 +31,10 @@
 .tabs button{cursor:default!important}
 #map .leaflet-container a,#map .leaflet-control,#map .leaflet-marker-icon{cursor:default!important}
 #detail .r11-treasure-details a{color:#1758a6}
+
+.r11-group-list{display:grid;gap:5px;padding:8px 0}
+.r11-group-list button{border:1px solid #d9e2ec;background:#f5f9fd;color:#263a4e;padding:8px;
+  border-radius:6px;cursor:default!important;text-align:left;font:12px/1.4 system-ui}
+.r11-group-list button:hover{background:#e7f2fd}
+.r11-group-list small{display:block;font-size:10px;color:#657587;margin:3px 0 0 18px}
+.r11-spot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px}
