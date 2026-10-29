@@ -150,7 +150,7 @@ def build_sqlite(data):
                 if ref: missing_links.append(["evidence_doc", e["id"], ref])
                 ref = None
             linked = e.get("object_ids") or []
-            con.execute("INSERT INTO evidence VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            con.execute("INSERT INTO evidence VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (e["id"], e.get("phase"), ref, s(e.get("page")),
                  s(e.get("page_end")), s(e.get("printed_page")), e.get("paragraph"),
                  e.get("summary"), e.get("kind"), e.get("confidence"), e.get("status"),
