@@ -22,7 +22,7 @@ function afterLoad(){
   const canCluster=typeof L.markerClusterGroup==="function";
   layer=canCluster?L.markerClusterGroup({
     maxClusterRadius:z=>z<9?58:z<12?40:28,
-    zoomToBoundsOnClick:false,spiderfyOnMaxZoom:false,
+    zoomToBoundsOnClick:false,spiderfyOnMaxZoom:false,disableClusteringAtZoom:14,
     showCoverageOnHover:false,removeOutsideVisibleBounds:true,
     iconCreateFunction:function(c){
       const members=c.getAllChildMarkers().flatMap(m=>m._atlasRows||[m._atlasRec].filter(Boolean));
@@ -60,8 +60,8 @@ function afterLoad(){
       const locations=new Set(members.map(r=>r.map_target.latitude.toFixed(6)+","+r.map_target.longitude.toFixed(6)));
       const oldZoom=map.getZoom();
       // Increase geographic zoom, not the spacing of icons. Preserve exact overlapping points as one stack.
-      if(oldZoom<10.1||(locations.size>1&&oldZoom<13.5)){
-        const target=oldZoom<10.1?10.8:Math.min(13.8,oldZoom+1.6);
+      if(oldZoom<10.1||(locations.size>1&&oldZoom<14)){
+        const target=oldZoom<10.1?10.8:Math.min(14,oldZoom+1.6);
         map.flyTo(e.layer.getLatLng(),target,{animate:true,duration:.65});
       }
     });
